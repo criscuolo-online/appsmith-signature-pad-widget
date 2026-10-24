@@ -65,9 +65,9 @@ The output is a full PNG data URL, not raw Base64. The onConfirm event also rece
 
 ## Live demo
 
-**Demo application:** Add your public Appsmith demo link here.
+**[Open the live demo](https://criscuolo-online21.appsmith.com/app/my-first-application/page1-6ad755c89b862f4749aff8cd?embed=true&environment=production)**
 
-**Screenshot:** Add a screenshot showing a fictional signature.
+The demo includes a Signature Pad and demonstrates how to capture and download a PNG. For best results, use a fictional signature when testing.
 
 To submit this as a community template, publish a standalone demonstration app without any corporate data, credentials or production datasources. Enable public access and forking.
 
