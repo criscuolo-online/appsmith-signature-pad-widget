@@ -1,0 +1,43 @@
+<div class="signature-widget" id="signatureWidget">
+  <section class="signature-card">
+    <header class="card-header">
+      <div class="icon-wrap">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 20h9"/>
+          <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
+        </svg>
+      </div>
+      <div class="header-text">
+        <h2 id="widgetTitle">Digital Signature</h2>
+        <p id="widgetSubtitle">Draw your signature in the area below</p>
+      </div>
+    </header>
+    <div class="canvas-wrap" id="canvasWrap">
+      <canvas id="signatureCanvas" aria-label="Draw your signature here"></canvas>
+      <div class="divider-line"></div>
+      <div class="canvas-label" id="canvasLabel">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 20h9"/>
+          <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
+        </svg>
+        <span id="placeholderText">Sign here</span>
+      </div>
+    </div>
+    <div class="actions">
+      <button type="button" id="clearButton" title="Clear signature" aria-label="Clear signature">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 6h18"/>
+          <path d="M8 6V4h8v2"/>
+          <path d="M19 6l-1 14H6L5 6"/>
+        </svg>
+      </button>
+      <button type="button" id="confirmButton" disabled>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+        <span id="confirmText">Confirm Signature</span>
+      </button>
+    </div>
+    <div class="status" id="signatureStatus" role="status" aria-live="polite"></div>
+  </section>
+</div>
