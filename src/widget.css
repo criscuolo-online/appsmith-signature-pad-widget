@@ -1,0 +1,34 @@
+*{box-sizing:border-box}
+html,body{margin:0!important;padding:0!important;width:100%;min-height:0;background:transparent!important}
+body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.signature-widget{--primary:var(--appsmith-theme-primaryColor,#6366f1);--surface:var(--appsmith-theme-backgroundColor,#fff);--radius:var(--appsmith-theme-borderRadius,12px);--text:#111827;--muted:#6b7280;--primary-foreground:#fff;--border:#c0c5ce;display:block;width:100%;max-width:none;margin:0;padding:0;background:transparent!important;border:none!important;box-shadow:none!important}
+.signature-card{width:100%;margin:0;padding:22px;background:var(--surface);color:var(--text);border:1px solid color-mix(in srgb,var(--text) 12%,transparent);border-radius:var(--radius);box-shadow:none}
+.card-header{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.icon-wrap{width:38px;height:38px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:var(--primary);border-radius:var(--radius)}
+.icon-wrap svg{width:19px;height:19px;fill:none;stroke:var(--primary-foreground);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.header-text{min-width:0}
+.header-text h2{margin:0;padding:0;font-size:18px;font-weight:650;line-height:1.3;color:var(--text)}
+.header-text p{margin:3px 0 0;padding:0;font-size:12px;line-height:1.5;color:var(--muted)}
+.canvas-wrap{position:relative;overflow:hidden;background:#fff;border:2px dashed var(--border);border-radius:var(--radius);transition:border-color .2s ease}
+.canvas-wrap.active,.canvas-wrap.signed{border-color:var(--primary);border-style:solid}
+#signatureCanvas{display:block;width:100%;height:180px;background:transparent;cursor:crosshair;touch-action:none;user-select:none;-webkit-user-select:none}
+#signatureCanvas.locked{pointer-events:none}
+.divider-line{position:absolute;bottom:32px;left:16px;right:16px;height:1px;background:#d1d5db;pointer-events:none}
+.canvas-label{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;gap:6px;font-size:11px;color:#6b7280;pointer-events:none;white-space:nowrap;transition:opacity .2s ease}
+.canvas-label svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.canvas-label.hidden{opacity:0}
+.actions{display:flex;gap:10px;margin-top:14px}
+.actions button{display:flex;align-items:center;justify-content:center;gap:8px;min-height:42px;padding:11px 16px;border:none;border-radius:var(--radius);font-family:inherit;font-size:14px;font-weight:600;line-height:1.2;cursor:pointer;transition:background .2s ease,opacity .2s ease,transform .2s ease}
+.actions button svg{width:16px;height:16px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+#clearButton{flex:0 0 44px;width:44px;padding:10px;color:var(--text);background:color-mix(in srgb,var(--text) 8%,var(--surface));border:1px solid color-mix(in srgb,var(--text) 15%,transparent)}
+#clearButton:hover:not(:disabled){background:color-mix(in srgb,var(--text) 15%,var(--surface))}
+#confirmButton{flex:1;min-width:0;background:var(--primary);color:var(--primary-foreground)}
+#confirmButton:hover:not(:disabled){background:color-mix(in srgb,var(--primary) 85%,black);transform:translateY(-1px)}
+#confirmButton:active:not(:disabled){transform:translateY(0)}
+.actions button:disabled{opacity:.45;cursor:not-allowed}
+.actions button:focus-visible{outline:2px solid var(--primary);outline-offset:3px}
+.status{display:none;margin-top:12px;padding:11px 14px;border-radius:var(--radius);font-size:13px;font-weight:500;line-height:1.5}
+.status.success{display:flex;align-items:center;gap:8px;background:#ecfdf3;color:#166534;border:1px solid #bbf7d0}
+.status.success::before{content:"✓";font-size:16px;font-weight:700}
+.status.error{display:flex;align-items:center;background:#fef2f2;color:#991b1b;border:1px solid #fecaca}
+@media(max-width:380px){.signature-card{padding:14px}.card-header{gap:10px;margin-bottom:16px}.header-text h2{font-size:16px}.header-text p{font-size:11px}.actions button{font-size:12px;padding:10px}#signatureCanvas{height:160px}}
