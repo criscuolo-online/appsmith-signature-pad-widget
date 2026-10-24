@@ -1,0 +1,8 @@
+{
+  "title": "Digital Signature",
+  "subtitle": "Draw your signature in the area below",
+  "placeholder": "Sign here",
+  "confirmText": "Confirm Signature",
+  "successMessage": "Signature captured successfully!",
+  "signature": null
+}
